@@ -1,1 +1,44 @@
 
+CREATE SCHEMA `shop` ;
+
+CREATE TABLE `shop`.`application` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `msg` VARCHAR(250) NULL DEFAULT 'text',
+  `created_at` DATETIME NULL DEFAULT 0000-00-00 00:00:00,
+  PRIMARY KEY (`id`));
+
+USE `shop`;
+INSERT INTO application (msg,created_at) VALUES('msg1','2021-09-25  12:23:00');
+INSERT INTO application (msg,created_at) VALUES('msg2','2021-09-25  14:04:00');
+INSERT INTO application (msg,created_at) VALUES('msg3','2021-09-25  15:07:06');
+INSERT INTO application (msg,created_at) VALUES('msg4','2021-09-25  15:40:20');
+INSERT INTO application (msg,created_at) VALUES('msg5','2021-09-25  17:01:10');
+INSERT INTO application (msg,created_at) VALUES('msg6','2021-09-25  17:21:15');
+INSERT INTO application (msg,created_at) VALUES('msg7','2021-09-26  10:15:06');
+INSERT INTO application (msg,created_at) VALUES('msg8','2021-09-26  12:00:20');
+INSERT INTO application (msg,created_at) VALUES('msg9','2021-09-26  12:40:09');
+INSERT INTO application (msg,created_at) VALUES('msg10','2021-09-26  15-06-45');
+
+
+
+CREATE TABLE `shop`.`clients` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `surname` VARCHAR(45) NULL,
+  `age` INT NULL,
+  `status` TINYINT NULL DEFAULT 0,
+  `birthday` DATE NULL DEFAULT 0000-00-00,
+  `created_at` DATETIME NULL DEFAULT 0000-00-00 00:00:00,
+  PRIMARY KEY (`id`));
+
+USE `shop`;
+INSERT INTO client (name,surname,age,status,birthday,created_at) VALUES('serhii','bozhuk',37,false,'1984-10-12','2021-09-25  12:23:00');
+INSERT INTO client (name,surname,age,status,birthday,created_at) VALUES('alina','zoiko',26,false,'1994-08-08','2021-09-25  14:04:00');
+INSERT INTO client (name,surname,age,status,birthday,created_at) VALUES('mykhailo','osibchuk',23,false,'1998-03-07','2021-09-25  15:07:06');
+INSERT INTO client (name,surname,age,status,birthday,created_at) VALUES('oleg','marynovsky',46,true,'1975-06-20','2021-09-25  15:40:20');
+INSERT INTO client (name,surname,age,status,birthday,created_at) VALUES('daria','mykhailyuk',34,true,'1987-11-05','2021-09-25  17:01:10');
+INSERT INTO client (name,surname,age,status,birthday,created_at) VALUES('konstantin','pavlovsky',19,false,'2002-01-09','2021-09-25  17:21:15');
+INSERT INTO client (name,surname,age,status,birthday,created_at) VALUES('taras','rudy',51,true,'1970-04-12','2021-09-26  10:15:06');
+INSERT INTO client (name,surname,age,status,birthday,created_at) VALUES('iryna','zalizny',28,true,'1992-09-10','2021-09-26  12:00:20');
+INSERT INTO client (name,surname,age,status,birthday,created_at) VALUES('maxim','stepaniuk',30,false,'1991-05-20','2021-09-26  12:40:09');
+INSERT INTO client (name,surname,age,status,birthday,created_at) VALUES('bogdan','loiko',37,true,'1984-01-29','2021-09-26 15-06-45');
